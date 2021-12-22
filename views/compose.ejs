@@ -1,0 +1,18 @@
+<%-include("partials/header");%>
+<h1>Compose</h1>
+<form class="" action="/compose" method="post">
+  <div class="form-group">
+    <label>Title</label>
+    <input class="form-control" type="text" name="postTitle" value="">
+    <label>Author</label>
+    <input class="form-control" type="text" name="postAuthor" value="">
+    <label>Date of Release</label>
+    <input class="form-control" type="text" name="postRelease" value="">
+    <label>Post</label>
+    <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+    <label>Rating</label>
+    <textarea style="margin-bottom: 5px;"class="form-control" name="postRating" rows="5" cols="30"></textarea>
+    <button class="btn btn-warning" type="submit" name="button">Publish</button>
+  </div>
+</form>
+<%-include("partials/footer1");%>
