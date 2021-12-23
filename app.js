@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 const password = process.env.PASSWORD;
-mongoose.connect("mongodb+srv://Ishan01:PASSWORD@cluster0.xnonp.mongodb.net/blogDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Ishan01:"+PASSWORD+"@cluster0.xnonp.mongodb.net/blogDB", {useNewUrlParser: true});
 const postSchema = {
  author: String,
  released: String,
