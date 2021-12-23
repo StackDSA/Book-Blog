@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 const password = process.env.PASSWORD;
-mongoose.connect("mongodb+srv://Ishan01:"+PASSWORD+"@cluster0.xnonp.mongodb.net/blogDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Ishan01:"+password+"@cluster0.xnonp.mongodb.net/blogDB", {useNewUrlParser: true});
 const postSchema = {
  author: String,
  released: String,
@@ -70,7 +70,7 @@ app.get("/posts/:postId",function(req,res){
     });
 })
 let port = process.env.PORT;
-if(port==NULL||port==""){
+if(port==null||port==""){
   port=3000;
 }
 app.listen(port, function() {
